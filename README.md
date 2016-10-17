@@ -13,9 +13,11 @@ This gets a list of RGB color tuples from a given image and treat them as 3-dim 
 ## Usage
 ```bash
 $ git clone git@github.com:honake/kmeans.git
+$ # If you haven't installed pillow
+$ pip3 install pillow
 $ cd kmeans
 $ # Put an image file in this directory
-$ main.py demo.jpg 5
+$ python3 main.py demo.jpg 5
 $ # => Converting...
 $ # => Almost There...
 $ # => Finished !
