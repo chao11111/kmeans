@@ -8,7 +8,7 @@ Python Implementation Of Color Reduction Using K-Means Clustering
 ![Paris Street Reduced](./assets/demo_reduced_3.bmp)
 
 ## Abstract
-This gets a list of RGB color tuples from a given image and treat them as 3-dim vectors. Group those vectors regarding to how far they are from one another by Euclidean measure. And assign the avarage color to each group, and apply it to the original image.
+This gets a list of RGB color tuples from a given image and treats them as 3-dim vectors. Group those vectors regarding to how far they are from one another by Euclidean measure. And assign the avarage color to each group, and apply it to the original image.
 
 ## Usage
 ```bash
