@@ -1,8 +1,8 @@
-# -*- coding: utf-8 -*-
 import sys
-from kmeans import *
-from PIL import Image
 import os.path
+import numpy as np
+from kmeans import Kmeans
+from PIL import Image
 
 args = sys.argv
 a = args[1]
@@ -11,6 +11,8 @@ name, ext = os.path.splitext(a)
 out = "{0}_reduced_{1}.bmp".format(name, b)
 
 x = Image.open(a)
-rgb = list(x.convert('RGB').getdata())
-x.putdata(kmeans(rgb, int(b)))
+rgb = np.array(x.convert('RGB').getdata())
+
+kmeans = Kmeans(int(b))
+x.putdata(kmeans.compress(rgb))
 x.save(out)
